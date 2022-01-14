@@ -52,8 +52,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-link page-scroll" href="galeri.php">Galeri</a>
-          <a class="nav-link page-scroll" href="index.php">About Us</a>
           <a class="nav-link page-scroll" href="index.php">Rekomendasi</a>
+          <a class="nav-link page-scroll" href="index.php">About Us</a>
           <a class="nav-link page-scroll" href="index.php">Contact Us</a>
           <a class="nav-link page-scroll mr-0" href="Backend/auth-login.php">Login</a>
         </div>
@@ -185,7 +185,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                           <fieldset>
-                            <input name="namatestimoni" type="text" id="namatestimoni" placeholder="Nama Kamu" required="">
+                            <input name="namatestimoni" type="text" id="namatestimoni" placeholder="Nama Kamu" required=" ">
                           </fieldset>
                         </div>
                         <div class="col-md-6 col-sm-12">

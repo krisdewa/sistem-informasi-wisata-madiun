@@ -189,7 +189,7 @@ if(isset($_POST['tambahakun'])) {
     $nama = filter_var($_POST['nama'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
     $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-    $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+    $password = md5($_POST['password']);
     
     $sql = mysqli_query($connect,"SELECT * FROM tbl_admin where email='$email'");
     $sqlnama = mysqli_query($connect,"SELECT * FROM tbl_admin where nama='$nama'");
@@ -229,7 +229,7 @@ if(isset($_POST['editdataakun'])) {
     $nama = filter_var($_POST['nama'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
     $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-    $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+    $password = md5($_POST['password']);
 
     $sql_edit = "UPDATE tbl_admin SET hak_akses ='$hak_akses', nama = '$nama', email = '$email', username = '$username', password = '$password' WHERE id_admin = '$id_admin' ";
     mysqli_query($connect, $sql_edit);
